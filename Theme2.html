@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="styleIT.css">
+
+</head>
+<body>
+    <div>
+        <h2>Enter Resume Details</h2>
+        <label>Name: <input type="text" id="name" class="input-field"></label>
+        <label>Email: <input type="text" id="email" class="input-field"></label>
+        <label>Phone: <input type="text" id="phone" class="input-field"></label>
+        <label>LinkedIn: <input type="text" id="linkedin" class="input-field"></label>
+        <label>GitHub: <input type="text" id="github" class="input-field"></label>
+        <label>Upload Photo: <input type="file" id="photo" accept="image/*" onchange="loadPhoto(event)"></label>
+        <!-- <button class="btn" onclick="updateResume()">Update Resume</button> -->
+        
+        <h3>Education</h3>
+        <div id="education-section"></div>
+        <button type="button" onclick="addEducationExperience('education')">+ Add Education</button>
+        
+        <h3>Experience</h3>
+        <div id="experience-section"></div>
+        <button type="button" onclick="addEducationExperience('experience')">+ Add Experience</button>
+        
+        <h3>Achievements</h3>
+        <div id="achievements-section"></div>
+        <button type="button" onclick="addSection('achievements')">+ Add Achievement</button>
+        
+        <h3>Hobbies & Interests</h3>
+        <div id="hobbies-section"></div>
+        <button type="button" onclick="addSection('hobbies')">+ Add Hobby</button>
+        
+        <h3>Skills</h3>
+        <div id="skills-section"></div>
+        <button type="button" onclick="addSection('skills')">+ Add Skill</button>
+        
+        <h3>Projects</h3>
+        <div id="projects-section"></div>
+        <button type="button" onclick="addSection('projects')">+ Add Project</button>
+        
+        <h3>Activities</h3>
+        <div id="activities-section"></div>
+        <button type="button" onclick="addSection('activities')">+ Add Activity</button>
+        
+        <button class="btn" onclick="updateResume()">Update Resume</button>
+    </div>
+    <div class="resume" id="resume">
+        <!-- <img src="bit_logo.png" class="bit-logo" alt="BIT Logo">
+        <img id="resume-photo" class="profile-pic" src="" alt="Your Photo"> -->
+        <div class="header">
+            <img src="bit_logo.png" class="bit-logo" alt="BIT Logo">
+            <!-- <img id="resume-photo" class="profile-pic" src="" alt="Your Photo"> -->
+            <h1 id="resume-name"></h1>
+            <div class="contact">
+                <p id="resume-email"></p>
+                <p id="resume-links"></p>
+            </div>
+            <img id="resume-photo" class="profile-pic" src="" alt="Your Photo">
+        </div>
+        <div class="content">
+            <div class="left-column">
+                <div class="section" id="resume-education"></div>
+                <div class="section" id="resume-experience"></div>
+                <div class="section" id="resume-achievements"></div>
+                <div class="section" id="resume-hobbies"></div>
+                <div class="section" id="resume-skills"></div>
+                <div class="section" id="resume-projects"></div>
+                <div class="section" id="resume-activities"></div>
+            </div>
+        </div>
+    </div>
+    <button class="btn" onclick="printResume()">Print Resume</button>
+   
+</body>
+<script src="IT.js"></script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETE Students' Forum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/ieteLogo.jpg" alt="IETE Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="page-1">
+            <div class="robot-hand">
+                <!-- <img src="img/hand.jpg" alt="Robot Hand"> -->
+            </div>
+
+            <div class="content">
+                <button class="cta-button">Make an impression that lasts!</button>
+                <h1>IETE Students' Forum!</h1>
+                <p>Your resume is your personal marketing tool, and we’re here to help you make it shine. With our intuitive platform, you can easily create a polished resume that showcases your talents and achievements. Whether you’re starting fresh or refining your existing resume, we provide all the tools you need to stand out in a competitive job market. Make your next career move with confidence.</p>
+            </div>
+            <!-- <div class="robot-hand">
+                <img src="hand.jpg" alt="Robot Hand">
+            </div> -->
+        </div>
+
+
+        <div class="page-2">
+            
+            <h1 class="resume-heading">RESUME BUILDER</h1>
+
+           </section>
+
+    <section class="resume-section">
+        <div class="text-content">
+            <h1><span class="highlight">Your next</span> Best hire</h1>
+            <h1><span class="highlight">Starts</span> Here</h1>
+            <p>🚀 Build Your Perfect Resume – Effortlessly & Professionally! A resume builder is your shortcut to a polished, professional resume in just a few clicks! With multiple templates and smart formatting, you can create a standout resume that aligns with your career goals.</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <span>1</span> Select a template from our collection.
+                </div>
+                <div class="step">
+                    <span>2</span> Build your resume using our easy-to-use resume builder.
+                </div>
+                <div class="step">
+                    <span>3</span> Download your resume.
+                </div>
+            </div>
+        </div>
+
+        <div class="image-content">
+            <img src="img/res3.jpg" alt="Resume Illustration">
+        </div>
+    </section>
+
+    <div class="button-container">
+        <button class="cta-button">Select Template</button>
+    </div>
+
+</div>
+<div class="theme-templates">
+    <h2>Choose Your Resume Template</h2>
+    <div id="template-container"></div>
+</div>
+
+
+<script>
+    const ThemeTemplateData = [
+        {
+            id: "Theme1",
+            imageSrc: "https://media-hosting.imagekit.io//4216d91ce4dd4ece/DOC-20241226-WA0046.png?Expires=1834855271&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=x0N5a6EKYrY3BkF8GeAG9lvZOSVdE80mfkEo5MgQb3V1FTEfQnOdRqr2LtQHrEOf01Z~p~arYF4vtRAuymswGlbXZibZh4jVQFTudvziypBZoqQzSaHAbeeuc5KLCzzxMpR4MncMnMRku7VF0pTPQBOMojgxqbP8iNLrczZ9wYXsFpFXMvf7XZYIon2aRnD-NIk98yHRlHOgBvDNUP~5V6xYlb2amYFTOjAntXv5pE-F0yC1eVZpFRv9D1QRgdL9v1mJ-AmZQPgrincFsMtc5aqj1FpHw7BrDuBaP4V28WWdAC-fR9L-i636EQPIGmaroZ5EcOQdlCulqqArOajMpA__",
+            imageAlt: "Theme1",
+        },
+        {
+            id: "Theme2",
+            imageSrc: "https://media-hosting.imagekit.io//92a4558d21354f2c/resume%20(1).jpg?Expires=1834855447&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zqvw3XH4RdlG0Fv0oTY2n3jdfCy3YfBrZTPDDiXVGig5FFmMx5PWoqksokjI9U4mzV3fwn7FM5ZIs-Xqn4ioyaZM81Aauie~BggOwQ8Ww0afZJOK37QDlt~j11v3F73ie1gGgUm5uSHULZOYMhdWHOzrCePIL3Hg7-MpATnf-qZGk9C1g5uZ4wy4HVQcantWImqQLqcDUC9zfGnyxrPZlzUZn8jjO1ZJZtS~iElftmW05VTwxt96aFVGrv9voT8Y0~Q~vcr9rs6WbWbpN7O58sB3KBOB0yKMvczIM3fXHC5ChWP2QTpGQUtgkuWzCJcZ38ihJ6gBVP78Hn4R64cm-w__",
+            imageAlt: "Theme2",
+        },
+    ];
+
+    const templateContainer = document.getElementById("template-container");
+
+    ThemeTemplateData.forEach(template => {
+        const templateDiv = document.createElement("div");
+        templateDiv.classList.add("template-item");
+        templateDiv.innerHTML = `
+            <img src="${template.imageSrc}" alt="${template.imageAlt}" class="template-image">
+            <button class="select-template" onclick="window.location.href='${template.id}.html'">Select ${template.id}</button>
+        `;
+        templateContainer.appendChild(templateDiv);
+    });
+</script>
+
+    <script src="script.js"></script>
+</body>
+</html>

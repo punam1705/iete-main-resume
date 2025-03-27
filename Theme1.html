@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styleCore.css">
+  
+</head>
+<body>
+    <div class="container">
+        <h2>Resume Builder</h2>
+        <form id="resumeForm">
+            <h3>Personal Details</h3>
+            <label>Full Name:</label>
+            <input type="text" id="name" required>
+            
+            <label>Degree:</label>
+            <input type="text" id="degree" required>
+            
+            <label>Batch:</label>
+            <input type="text" id="batch" required>
+            
+            <label>Roll No:</label>
+            <input type="text" id="roll" required>
+            
+            <label>Registration No:</label>
+            <input type="text" id="reg" required>
+            
+            <h3>Objective</h3>
+            <textarea id="objective" rows="4" style="width:100%" required></textarea>
+
+          
+
+            <h3>Education</h3>
+<table id="educationTable">
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Board/University</th>
+            <th>Institute</th>
+            <th>Percentage/CGPA</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="text" class="edu-year" required></td>
+            <td><input type="text" class="edu-board" required></td>
+            <td><input type="text" class="edu-institute" required></td>
+            <td><input type="text" class="edu-grade" required></td>
+        </tr>
+    </tbody>
+</table>
+
+            <h3>Skills & Interests</h3>
+            <label>Technical Skills:</label>
+            <input type="text" id="techSkills" required>
+            
+            <label>Soft Skills:</label>
+            <input type="text" id="softSkills" required>
+            
+            <label>Hobbies/Interests:</label>
+            <input type="text" id="hobbies" required>
+
+            <h3>Achievements</h3>
+            <textarea id="achievements" rows="3" style="width:100%" required></textarea>
+
+            <h3>Positions of Responsibility</h3>
+            <textarea id="por" rows="3" style="width:100%" required></textarea>
+
+            <h3>Co-Curricular Activities</h3>
+            <textarea id="activities" rows="3" style="width:100%" required></textarea>
+
+
+            <h3>Personal Details</h3>
+           
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+
+            <label for="father">Father's Name | Occupation:</label>
+            <input type="text" id="father" required>
+
+            <label for="mother">Mother's Name | Occupation:</label>
+            <input type="text" id="mother" required>
+
+          
+            
+
+            <h3>Internship/Training</h3>
+<table>
+    <tr>
+        <th>Organization</th>
+        <th>Period</th>
+        <th>Project Title</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="org" required></td>
+        <td><input type="text" id="period" required></td>
+        <td><input type="text" id="project" required></td>
+    </tr>
+</table>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+            <!-- <button type="button"  onclick="printResume()">Print Resume</button> -->
+        </form>
+    </div>
+    <!-- <button type="button"  onclick="printResume()">Print Resume</button> -->
+    <div id="resumeOutput" class="container">
+        <div id="printableResume" style="display: none;"></div>
+        <button type="button"  onclick="printResume()">Print Resume</button>
+
+    </div>
+
+    <!-- <button type="button"  onclick="printResume()">Print Resume</button> -->
+
+
+
+   
+    <div id="printableResume" style="display: none;"></div>
+  <script src="Core.js"></script>
+</body>
+</html> 
+
